@@ -4,6 +4,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class MyWorld extends World
 {
     
+    public int spd = 1;
+    
     public MyWorld()
     {    
         super(600, 400, 1, false);
@@ -29,6 +31,7 @@ public class MyWorld extends World
     {
         score++;
         scoreLabel.setValue(score);
+        if (score % 10 == 0) ++spd;
     }  
     
     public int score = 0;
