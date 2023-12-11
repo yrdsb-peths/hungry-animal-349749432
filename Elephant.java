@@ -36,7 +36,16 @@ public class Elephant extends Actor
             MyWorld world = (MyWorld) getWorld();
             world.createApple();
             world.increaseScore();
+            elephantSound.play();
         }
         
+    }
+    
+    GreenfootSound elephantSound = new GreenfootSound("elephantcub.mp3");
+    GreenfootImage idle = new GreenfootImage("images/elephant_ilde/ilde0.png");
+    
+    public Elephant()
+    {
+        setImage(idle);
     }
 }
