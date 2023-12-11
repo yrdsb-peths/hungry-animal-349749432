@@ -25,10 +25,12 @@ public class MyWorld extends World
         addObject(apple, x, y);
     }
     
+    public int speed = 1;
     public void increaseScore()
     {
         score++;
         scoreLabel.setValue(score);
+        if(score % 10 == 0) speed++;
     }  
     
     public int score = 0;
